@@ -1,0 +1,29 @@
+<table class="table table-info table-striped my-5 w-100">
+    <thead class="text-center">
+        <tr class="text-center mx-auto">
+            {{!-- <th scope="col">ID</th> --}}
+            <th scope="col">Título</th>
+            <th scope="col">Sesiones</th>
+            <th scope="col">Descripción</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each bootcamps }}
+        <tr class="text-center ">
+            {{!-- <th scope="row">{{this.id}}</th> --}}
+            <td>{{this.title}}</td>
+            <td>{{this.cue}}</td>
+            <td>{{this.description}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+<style>
+    .table{
+        box-shadow: 7px 7px 5px 0px rgb(172, 171, 171);
+        -webkit-box-shadow: 7px 7px 5px 0px rgb(167, 166, 166);
+        -moz-box-shadow: 7px 7px 5px 0px rgb(155, 154, 154);
+        width: 80vw;
+    }
+</style>

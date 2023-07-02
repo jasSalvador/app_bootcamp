@@ -1,6 +1,5 @@
 import Sequelize from 'sequelize';
 import dotenv from 'dotenv';
-//dotenv.config({path: `.env.${process.env.NODE_ENV}`})
 dotenv.config();
 
 let database, user, password, host;
@@ -17,11 +16,6 @@ if (process.env.NODE_ENV == "production") {
     host ="localhost";
 } 
 console.log(host);
-
-/* const database = process.env.DB_DATABASE ;
-const user = process.env.DB_USER;
-const password = process.env.DB_PASSWORD;
-const host = process.env.DB_HOST; */
 
 const sequelize = new Sequelize(
     database,

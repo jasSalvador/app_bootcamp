@@ -1,0 +1,85 @@
+<!--formulario registro-->
+<form id="formRegister" action="" method="" class="w-50 text-start mx-auto p-5 border rounded-3">
+    <label for="firstName" class="form-label px-1">Nombre</label>
+    <input value="" type="text" name="firstName" id="firstName" class="form-control" required>
+    <label for="lastName" class="form-label px-1">Apellido</label>
+    <input value="" type="text" name="lastName" id="lastName" class="form-control" required>
+    <label for="email" class="form-label px-1">Email</label>
+    <input value="" type="email" name="email" id="email" class="form-control" required>
+    <div class="text-center mx-auto mt-5">
+        <input type="submit" value="Registrarme" class="btn mt-2 mx-1" id="recordForm">
+        <input type="submit" value="Cancelar" class="btn mt-2 mx-1" id="recordCancel">
+    </div>
+</form>
+
+<script>
+    let recordForm = document.getElementById('recordForm');
+    let recordCancel = document.getElementById('recordCancel');
+
+    //redirige a pag inicio al cancelar regitro
+    recordCancel.addEventListener('click', (event) => {
+        location.href = "/";
+    });
+
+    //capturamos el evento submit del formualrio para agregar y modificar
+    let formRegister = document.getElementById('formRegister')
+    formRegister.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        let selector = event.submitter.id
+        if (selector == "recordForm") {
+
+            console.log('Capturando nuevo registro');
+            try {
+                const raw = JSON.stringify({
+                    "firstName": firstName.value,
+                    "lastName": lastName.value,
+                    "email": email.value,
+                })
+
+                const myHeaders = new Headers();
+                myHeaders.append("Content-Type", "application/json");
+
+                let response = await fetch("/api/users", {
+
+                    method: "POST",
+                    headers: myHeaders,
+                    body: raw,
+                    redirect: 'follow'
+                });
+
+                let data = await response.json();
+                //console.log(data);
+                if (data.code == 201) {
+                    alert("Usuario creado con éxito.")
+                    formRegister.reset();
+                    location.reload();
+                } else {
+                    throw new Error("Error al guardar los datos en la BD.")
+                    //alert("Error al guardar los datos en la BD.")
+                }
+            } catch (error) {
+                alert(error.message)
+            }
+        }
+    })
+</script>
+
+<style>
+    #recordForm{
+        background-color: rgb(32, 221, 63);
+        color: white;
+    }
+    #recordForm:hover{
+        background-color: rgb(56, 231, 158);
+        color: black;
+    }
+    #recordCancel{
+        background-color: rgb(223, 35, 22);
+        color: white;
+    }
+    #recordCancel:hover{
+        background-color: rgb(250, 53, 53);
+        color: black;
+    }
+</style>

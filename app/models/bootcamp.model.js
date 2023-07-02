@@ -5,7 +5,7 @@ const Bootcamp = sequelize.define(
     "bootcamps",
     {
         title: {
-            type: DataTypes.STRING(50),
+            type: DataTypes.STRING(100),
             allowNull: false,
         },
         cue: {
@@ -17,7 +17,7 @@ const Bootcamp = sequelize.define(
             },
         },
         description: {
-            type: DataTypes.STRING(50),
+            type: DataTypes.STRING(255),
             allowNull: false,
         },
     },
