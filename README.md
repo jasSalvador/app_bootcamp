@@ -3,7 +3,7 @@
 Se expone un servicio que permite hacer CRUD de las entidades usuario y bootcamp, así como también asociar un usuario a un bootcamp mediante requests HTTP con el respectivo método y payload. El payload soportado es en formato JSON.
 
 ##<b>Frontend y Despliegue:</b> 
-Además de desarrollar el backend de la aplicación, también he creado el frontend correspondiente. Puedes ver la página de inicio localmente visitando localhost:3000 en tu navegador. Además, he realizado un despliegue en un servidor gratuito utilizando el servicio de alojamiento de Ciclic. La aplicación está completamente funcional en el servidor y se accede a través de la siguiente URL: https://cursos-bootcamp.cyclic.app. La base de datos utilizada para el despliegue se encuentra en ElephantSQL.
+Además de desarrollar el backend de la aplicación, también he creado el frontend correspondiente. Puedes ver la página de inicio localmente visitando localhost:3000 en tu navegador. En la seccion "Bootcamp" se muestran los cursos disponibles cargados dinamicamente desde la base de datos y en inscripciones el formulario para gregar un nuevo usuario, el que tambien se guardará en la bd local.
 
 
 ## Ejemplo de serialización de un Usuario:
