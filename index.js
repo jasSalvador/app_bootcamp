@@ -12,9 +12,7 @@ const main = async () => {
         app.listen(PORT, () =>
             console.log("Servidor escuchando en http://localhost:" + PORT)
         );
-        app.on('error', () => {
-            console.log("algo falló");
-        });
+
     } catch (error) {
         console.log("Ha ocurrido un error: ", error);
     }
