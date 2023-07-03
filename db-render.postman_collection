@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "81509e5e-6a57-447e-858c-ef5cb2050aee",
+		"name": "evaluacion7-virtual",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24572160"
+	},
+	"item": [
+		{
+			"name": "user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Facundo\",\r\n    \"lastName\": \"Fernandez\",\r\n    \"email\": \"facundo@correo.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://cursos-bootcamp.cyclic.app/api/users",
+					"protocol": "https",
+					"host": [
+						"cursos-bootcamp",
+						"cyclic",
+						"app"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bootcamp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Bootcamp React\",\r\n    \"cue\": 10,\r\n    \"description\": \"React es la librería más usada en JavaScript para el desarrollo de interfaces.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bootcamp-app.onrender.com/api/bootcamp",
+					"protocol": "https",
+					"host": [
+						"bootcamp-app",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"bootcamp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "users",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Elena\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bootcamp-app.onrender.com/api/users/3",
+					"protocol": "https",
+					"host": [
+						"bootcamp-app",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"users",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "vincular user-bootcamp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idBootcamp\": 1,\r\n    \"idUser\": 4\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bootcamp-app.onrender.com/api/bootcamp/vinculate",
+					"protocol": "https",
+					"host": [
+						"bootcamp-app",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"bootcamp",
+						"vinculate"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

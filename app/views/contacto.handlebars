@@ -3,27 +3,46 @@
         <img src="/public/krakenimages.jpg" alt="contactanos">
         <div class="text">
             <h2 class="text-center text-black fs-1 fw-bold">Contáctanos</h2>
-            <h4 class="text-center text-black fw-bold">Gracias por tu interés en Mundo EDUC</h4>
+            <h4 class="text-center text-black fw-bold">Para consultas en general escríbenos a sumate@educ.com.</h4>
+            <h4 class="text3 text-center text-dark fw-bold pt-4">Gracias por tu interés en Mundo EDUC!</h4>
         </div>
     </div>
-    <div class="container py-5">
-        <h5 class="text-center mx-auto">
-            Para consultas en general escríbenos a sumate@educ.com.
-        </h5>
-    </div>
 </section>
-
 <style>
     .contact img{
         width: 100%;
-        height: 400px;
+        height: auto;
         position: relative;
         display: inline-block;
+        opacity: .5;
     }
     .text{
         position: absolute;
         top: 65%;
         left: 50%;
         transform: translate(-50%, -50%);
+    }
+    @media (max-width: 992px){
+        .text{
+            top: 55%;
+            width: 90%;
+        }
+    }
+    @media (max-width: 768px){
+        .text{
+            top: 45%;
+            width: 90%;
+        }
+        .text3{
+            font-size: medium;
+        }
+    }
+    @media (max-width: 576px){
+        .text{
+            top:35%
+        }
+        .text3{
+            display: none;
+        }        
     }
 </style>

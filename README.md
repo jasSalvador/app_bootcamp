@@ -3,7 +3,14 @@
 Se expone un servicio que permite hacer CRUD de las entidades usuario y bootcamp, así como también asociar un usuario a un bootcamp mediante requests HTTP con el respectivo método y payload. El payload soportado es en formato JSON.
 
 ##<b>Frontend y Despliegue:</b> 
-Además de desarrollar el backend de la aplicación, también he creado el frontend correspondiente. Puedes ver la página de inicio localmente visitando localhost:3000 en tu navegador. En la seccion "Bootcamp" se muestran los cursos disponibles cargados dinamicamente desde la base de datos y en inscripciones el formulario para gregar un nuevo usuario, el que tambien se guardará en la bd local.
+
+Además de desarrollar el backend de la aplicación, he creado el frontend correspondiente y he realizado el despliegue de la app y la base de datos utilizando el servicio de alojamiento de Render.
+
+La aplicación se encuentra completamente funcional en el servidor y se puede acceder a través de la siguiente URL: https://bootcamp-app.onrender.com/
+
+Si deseas ver la página localmente, simplemente visita localhost:3000 en tu navegador. 
+
+En la sección "Bootcamp" de la aplicación, se muestran los cursos disponibles, los cuales son cargados dinámicamente desde la base de datos. Además, en la sección de "Inscripciones" se encuentra un formulario que permite agregar un nuevo usuario, el cual se guarda en la base de datos correspondiente.
 
 
 ## Ejemplo de serialización de un Usuario:
