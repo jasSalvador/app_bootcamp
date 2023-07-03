@@ -3,6 +3,12 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 let database, user, password, host;
+let option = {
+        ssl: {
+            require: true,
+            rejectUnauthorized: false,
+        },
+    }
 
 if (process.env.NODE_ENV == "production") {
     database = process.env.DB_DATABASE ;
@@ -14,6 +20,7 @@ if (process.env.NODE_ENV == "production") {
     user = "postgres";
     password ="123456";
     host ="localhost";
+    option = null;
 } 
 console.log(host);
 
@@ -30,7 +37,8 @@ const sequelize = new Sequelize(
         min: 0,
         acquire: 10000,
         idle: 10000,
-    }
+    },
+    dialectOptions: option
 });
 
 export default sequelize;
