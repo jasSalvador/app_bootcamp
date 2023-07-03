@@ -42,7 +42,7 @@ app.use('/bootstrap', express.static('./node_modules/bootstrap/dist/'));
 
 
 // Publish the 'public' folder
-app.use(express.static('public'));
+app.use('/public', express.static('public'));
 
 
 // ROUTES
