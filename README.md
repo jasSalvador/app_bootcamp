@@ -1,16 +1,48 @@
 #<b>Api Cursos Bootcamp</b>
 
-Se expone un servicio que permite hacer CRUD de las entidades usuario y bootcamp, así como también asociar un usuario a un bootcamp mediante requests HTTP con el respectivo método y payload. El payload soportado es en formato JSON.
-
-##<b>Frontend y Despliegue:</b> 
-
-Además de desarrollar el backend de la aplicación, he creado el frontend correspondiente y he realizado el despliegue de la app y la base de datos utilizando el servicio de alojamiento de Render.
+Este proyecto permite gestionar usuarios e inscripciones a bootcamps. Los datos son manejados mediante peticiones HTTP con payload en formato JSON. Además he creado el frontend correspondiente y he realizado el despliegue de la app y la base de datos utilizando el servicio de alojamiento de Render.
 
 La aplicación se encuentra completamente funcional en el servidor y se puede acceder a través de la siguiente URL: https://bootcamp-app.onrender.com/
 
-Si deseas ver la página localmente, simplemente visita localhost:3000 en tu navegador. 
+La vista web solo permite registrar usuarios. La creación y asociación de bootcamps debe hacerse por la API.
 
-En la sección "Bootcamp" de la aplicación, se muestran los cursos disponibles, los cuales son cargados dinámicamente desde la base de datos. Además, en la sección de "Inscripciones" se encuentra un formulario que permite agregar un nuevo usuario, el cual se guarda en la base de datos correspondiente.
+
+##<b>✨ Funciones principales:</b> 
+
+- Crud completo de usuarios.
+- Asociación de usuarios a bootcamps.
+- Visualización de usuarios y cursos disponibles en formato JSON.
+- Formulario web funcional para registrar nuevos usuarios.
+
+##<b>🛠️ Técnologias utilizadas:</b>
+
+- Node.js
+- Express
+- Sequelize
+- PostgreSQL
+- Handlebars 
+- Render (para el despliegue, actualmente fuera de línea)
+
+
+## 📦 Instalación y ejecución
+
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/jasSalvador/app_bootcamp.git
+
+2. Entra al directorio del proyecto:
+   app_bootcamp
+
+3. Instala las dependencias:
+   npm install
+
+4. Ejecuta el servidor:
+   npm run dev
+
+5- Accede a la app en tu navegador:
+   http://localhost:3000
+   
+*Asegurate de que el puerto 3000 esté libre.
 
 
 ## Ejemplo de serialización de un Usuario:
@@ -28,7 +60,6 @@ En la sección "Bootcamp" de la aplicación, se muestran los cursos disponibles,
 {  "userId": 4,  "bootcampId": 3 }
 
 
-
 ## Métodos soportados:
 
 <b>GET:</b> obtener información de un usuario o todos los usuarios/Bootcamp
@@ -38,15 +69,6 @@ En la sección "Bootcamp" de la aplicación, se muestran los cursos disponibles,
 <b>PUT:</b> actualizar la información de un Usuario/Bootcamp
 
 <b>DELETE:</b> eliminar un Usuario/Bootcamp
-
-
-## Para ejecutar el servidor:
-
-Verificar que el puerto 3000 no esté en uso
-
-Ejecutar npm run dev desde la terminal
-
-El servidor estará disponible en http://localhost:3000
 
 
 ## Rutas:
@@ -80,27 +102,25 @@ PUT http://localhost:3000/api/users/2
 DELETE http://localhost:3000/api/users/2
 
 
+#### <b>Para los bootcamp</b>
 
-#### <b>Para los bootcamps</b>
+<b>Obtener información de todos los Bootcamp:</b>
 
-<b>Obtener información de todos los Bootcamps:</b>
-
-GET http://localhost:3000/api/bootcamps
+GET http://localhost:3000/api/bootcamp
 
 
 <b>Obtener información de un Bootcamp en particular (ID):</b>
 
-http://localhost:3000/api/bootcamps/1
+http://localhost:3000/api/bootcamp/1
 
 
 <b>Crear un nuevo Bootcamp</b>
 
-POST http://localhost:3000/api/bootcamps
-
+POST http://localhost:3000/api/bootcamp
 
 
 #### <b>Asociación</b>
 
 <b>Asociar un Usuario a un bootcamp</b>
 
-http://localhost:3000/api/bootcamps/asociar
+http://localhost:3000/api/bootcamp/asociar
